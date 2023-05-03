@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  mailhog: # mail server
+    image: mailhog/mailhog:latest
+    container_name: mailhog
+    logging:
+      driver: 'none'  # disable saving logs
+    ports:
+      - 1025:1025 # smtp server
+      - 8025:8025 # web ui
+
