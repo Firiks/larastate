@@ -76,7 +76,7 @@
 /*global route*/
 import { useForm } from '@inertiajs/vue3'
 const form = useForm({
-    beds: 0,
+    beds: 0, // 0 is default value
     baths: 0,
     area: 0,
     city: null,

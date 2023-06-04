@@ -39,7 +39,7 @@ Route::get('login', [AuthController::class, 'create'])->name('login');
 Route::post('login', [AuthController::class, 'store'])->name('login.store');
 Route::delete('logout', [AuthController::class, 'destroy'])->name('logout');
 
-// email verification
+// user is redirected to this page if not verified
 Route::get('/email/verify', function () {
     return inertia('Auth/VerifyEmail'); // call the VerifyEmail file in resources/js/Pages/Auth/VerifyEmail.vue
 })->middleware('auth')->name('verification.notice');
@@ -50,7 +50,7 @@ Route::post('/email/verification-notification', function (Request $request) {
     return back()->with('success', 'Verification link sent!');
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
-// verify email link
+// verify email link - handler
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();
     return redirect()->route('listing.index')->with('success', 'Email was verified!');

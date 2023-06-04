@@ -10,7 +10,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 
 class OfferMade extends Notification
 {
-    use Queueable;
+    use Queueable; // use the Queueable trait to allow the notification to be queued
 
     /**
      * Create a new notification instance.
