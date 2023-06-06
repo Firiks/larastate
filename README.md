@@ -14,3 +14,4 @@ Laravel SPA application for listing real estate properties.
 - create .env file from .env.example `cp .env.example .env`
 - generate keys using `php artisan key:generate`
 - migrate & seed database using `php artisan migrate --seed`
+- link storage using `php artisan storage:link`
