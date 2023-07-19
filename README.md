@@ -2,6 +2,8 @@
 
 Laravel SPA application for listing real estate properties. 
 
+<img src="app.png" alt="Larastate" width="80%">
+
 ## Used technologies
   * Vue.js version 3 + composition API
   * Inertia.js
